@@ -11,6 +11,17 @@ export const getDepartamentos = async (req, res) => {
   }
 };
 
+export const getHogarDepartamento = async (req, res) => {
+  try {
+    const pool = await getConnection();
+    const result = await pool.request().query("SELECT * FROM dbo.hogar_depto");
+    res.json(result.recordset);
+  } catch (error) {
+    res.status(500);
+    res.send(error.message);
+  }
+};
+
 /*
 export const createNewProduct = async (req, res) => {
   const { name, description, quantity = 0, price } = req.body;

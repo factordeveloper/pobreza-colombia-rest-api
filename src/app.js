@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 
-import departamentosRoutes from "./routes/departamentos.routes.js";
+import pobrezacolRoutes from "./routes/pobrezacol.routes.js";
 
 const app = express();
 
@@ -12,6 +12,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Routes
-app.use("/api", departamentosRoutes);
+app.use("/api", pobrezacolRoutes);
 
 export default app;

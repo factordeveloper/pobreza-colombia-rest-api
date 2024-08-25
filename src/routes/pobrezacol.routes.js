@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
   getDepartamentos,
+  getHogarDepartamento,
   /*
   createNewProduct,
   getProductById,
@@ -8,11 +9,12 @@ import {
   getTotalProducts,
   updateProductById,
   */
-} from "../controllers/departamentos.controllers.js";
+} from "../controllers/pobrezacol.controllers.js";
 
 const router = Router();
 
 router.get("/departamentos", getDepartamentos);
+router.get("/hogar-depto", getHogarDepartamento);
 /*
 router.post("/products", createNewProduct);
 
